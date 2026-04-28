@@ -16,7 +16,7 @@ asyncio
 
 # Database
 motor>=3.6.0
-dnspython>=2.7.0
+dnspython>=2.8.0
 
 # Media / audio
 ffmpeg-python>=0.2.0
