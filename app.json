@@ -1,0 +1,102 @@
+{
+  "name": "AradhyeMusic",
+  "description": "AradhyeMusic — Advanced Telegram Voice Chat Music Bot (Python 3.12, Pyrofork + Py-TgCalls).",
+  "logo": "https://files.catbox.moe/v7hio8.jpg",
+  "keywords": [
+    "python3.12",
+    "telegram",
+    "voice-chat",
+    "music-bot",
+    "pyrofork",
+    "py-tgcalls",
+    "AradhyeMusic"
+  ],
+  "repository": "https://github.com/amanraj1240/AradhyeMusic",
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bot token from @BotFather",
+      "value": "",
+      "required": true
+    },
+    "STRING_SESSION": {
+      "description": "Pyrogram v2 string session for the assistant userbot",
+      "value": "",
+      "required": true
+    },
+    "MONGO_DB_URI": {
+      "description": "MongoDB URI (e.g. from https://cloud.mongodb.com)",
+      "value": "",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram user-id of the bot owner",
+      "value": "",
+      "required": true
+    },
+    "OWNER_USERNAME": {
+      "description": "Owner Telegram username (without @)",
+      "value": "amanraj1240",
+      "required": false
+    },
+    "BOT_USERNAME": {
+      "description": "Bot username (without @)",
+      "value": "",
+      "required": true
+    },
+    "LOG_GROUP_ID": {
+      "description": "Log group id (bot must be admin)",
+      "value": "",
+      "required": true
+    },
+    "STRING_SESSION2": { "description": "Optional 2nd assistant", "value": "", "required": false },
+    "STRING_SESSION3": { "description": "Optional 3rd assistant", "value": "", "required": false },
+    "STRING_SESSION4": { "description": "Optional 4th assistant", "value": "", "required": false },
+    "STRING_SESSION5": { "description": "Optional 5th assistant", "value": "", "required": false },
+    "SPOTIFY_CLIENT_ID":     { "description": "Optional Spotify API",    "value": "", "required": false },
+    "SPOTIFY_CLIENT_SECRET": { "description": "Optional Spotify API",    "value": "", "required": false },
+    "UPSTREAM_REPO": {
+      "description": "URL of your GitHub repository (used by the in-bot updater)",
+      "value": "https://github.com/amanraj1240/AradhyeMusic",
+      "required": false
+    },
+    "UPSTREAM_BRANCH": {
+      "description": "Default branch name",
+      "value": "main",
+      "required": false
+    },
+    "GIT_TOKEN": {
+      "description": "GitHub PAT (only needed for private upstream repos)",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_API_KEY":  { "description": "Your Heroku API key",   "value": "", "required": false },
+    "HEROKU_APP_NAME": { "description": "Your Heroku app name",  "value": "", "required": false },
+    "SUPPORT_GROUP":   { "description": "Support group link",    "value": "https://t.me/ShrutiBotsSupport", "required": false },
+    "SUPPORT_CHANNEL": { "description": "Support channel link",  "value": "https://t.me/ShrutiBots",        "required": false },
+    "INSTAGRAM": { "description": "Instagram link", "value": "https://instagram.com/",        "required": false },
+    "YOUTUBE":   { "description": "YouTube link",   "value": "https://youtube.com/",          "required": false },
+    "GITHUB":    { "description": "GitHub profile", "value": "https://github.com/amanraj1240", "required": false },
+    "DONATE":    { "description": "Donation link",  "value": "",                              "required": false },
+    "START_IMG_URL": {
+      "description": "Image shown with /start",
+      "value": "https://files.catbox.moe/7q8bfg.jpg",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/python" },
+    { "url": "heroku/nodejs" },
+    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git" }
+  ]
+}
