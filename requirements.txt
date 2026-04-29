@@ -34,7 +34,7 @@ py-yt-search>=0.6.2
 spotipy>=2.24.0
 
 # Utility
-beautifulsoup4>=4.12.3
+beautifulsoup4>=4.14.3
 gitpython>=3.1.43
 heroku3>=5.2.1
 psutil>=6.1.0
