@@ -12,7 +12,7 @@ tgcrypto>=1.2.5
 # last pure-Python release with the legacy API the bot uses
 # (StreamType, AudioPiped, AudioVideoPiped, HighQualityAudio,
 # MediumQualityVideo, StreamAudioEnded), and has no ntgcalls dep.
-py-tgcalls==0.9.7
+py-tgcalls==2.2.12
 pykeyboard>=0.1.5
 
 # Async / HTTP
