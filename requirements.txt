@@ -1,10 +1,15 @@
 # AradhyeMusic — Python dependencies (Python 3.12 compatible)
 
 # Telegram core
+# Note: pyrofork and kurigram are both pyrogram forks; install only one
+# to avoid namespace conflicts. The bot codebase targets the pyrofork
+# API surface (Client, idle, types).
 pyrofork>=2.3.34
-kurigram>=2.2.6
 tgcrypto>=1.2.5
-py-tgcalls>=2.1.5
+# py-tgcalls 2.x removed StreamType / AudioPiped / quality enums that
+# core/call.py imports. Pin to the latest 1.x line until the bot is
+# ported to the new py-tgcalls 2.x API.
+py-tgcalls>=1.2.9,<2.0
 pykeyboard>=0.1.5
 
 # Async / HTTP
