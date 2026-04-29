@@ -28,6 +28,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from ShrutiMusic import LOGGER, app, userbot
 from ShrutiMusic.core.call import Nand
+from ShrutiMusic.keepalive import start_keepalive_server
 from ShrutiMusic.misc import sudo
 from ShrutiMusic.plugins import ALL_MODULES
 from ShrutiMusic.utils.database import get_banned_users, get_gbanned
@@ -76,6 +77,7 @@ async def setup_bot_commands():
         LOGGER("ShrutiMusic").error(f"Failed to set bot commands: {str(e)}")
 
 async def init():
+    start_keepalive_server()
     if (
         not config.STRING1
         and not config.STRING2

@@ -1,10 +1,11 @@
 services:
-  - type: worker
+  - type: web
     name: aradhyemusic
     runtime: docker
-    plan: starter
+    plan: free
     dockerfilePath: ./Dockerfile
     autoDeploy: true
+    healthCheckPath: /health
     envVars:
       - key: API_ID
         sync: false
