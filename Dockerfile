@@ -60,9 +60,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY --from=builder /install /usr/local
 
 # App user (don't run as root)
-RUN useradd -m -u 1000 aradhye
+RUN useradd -m -u 1000 aradhye \
+ && mkdir -p /app \
+ && chown -R aradhye:aradhye /app
 WORKDIR /app
 COPY --chown=aradhye:aradhye . /app/
+# Re-assert ownership of WORKDIR so the runtime user can write log files,
+# downloads/, cookies, etc. inside /app at runtime.
+RUN chown -R aradhye:aradhye /app
 USER aradhye
 
 CMD ["bash", "start"]
